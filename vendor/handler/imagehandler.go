@@ -7,11 +7,11 @@ import (
 )
 
 func Index(ctx *fasthttp.RequestCtx) {
-	ctx.WriteString("Welcome!")
+	ctx.WriteString("Howdy API Image Resize")
 }
 
 func Hello(ctx *fasthttp.RequestCtx) {
-	fmt.Fprintf(ctx, "Hello, %s\n", ctx.UserValue("filepath"))
+	fmt.Fprintf(ctx, "Path:, %s\n", ctx.UserValue("filepath"))
 	// fmt.Printf(ctx.QueryArgs().String())
 	// var queryValue = ctx.QueryArgs().Peek("width")
 	if ctx.QueryArgs().Has("width") {
