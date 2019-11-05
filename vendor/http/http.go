@@ -12,7 +12,7 @@ import (
 func ImageHttp() {
 	r := router.New()
 	r.GET("/", handlerHTTP.Index)
-	r.GET("/hello/*filepath", handlerHTTP.Hello)
+	r.GET("/resize/*filepath", handlerHTTP.Resize)
 
 	log.Fatal(fasthttp.ListenAndServe(":8080", r.Handler))
 }
